@@ -1,0 +1,21 @@
+[
+    { "caption": "-" },
+    {
+        "caption": "ApiGen",
+        "children":
+        [
+            { 
+                "caption": "Generate",
+                "command": "api_gen_generate" 
+            },
+            { 
+                "caption": "Selfupdate",
+                "command": "api_gen_selfupdate" 
+            },
+            { 
+                "caption": "Version",
+                "command": "api_gen_version" 
+            },
+         ]
+    }
+]
