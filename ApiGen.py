@@ -31,7 +31,6 @@ class ApiGenGenerateCommand(ApiGenBaseClass):
         if path == None:
             return
 
-        print(path)
         ag.activate()
         self.view.run_command('api_gen_show_console') 
         config = ag.getConfigFile(path)
@@ -47,3 +46,47 @@ class ApiGenGenerateCommand(ApiGenBaseClass):
             print('No config file could not be found!')
             ag.endLine()
             ag.deactivate()
+
+class ApiGenFreeformCommand(ApiGenBaseClass):
+    def run(self, edit):
+        ag.activate()
+        window = self.view.window()
+        window.show_input_panel('ApiGen Arguments', '', self.done, None, self.cancel)
+
+    def done(self, args):
+        self.view.run_command('api_gen_show_console') 
+        args = [args]
+        sublime.set_timeout_async(lambda : ag.runApiGen(args), 0)
+
+    def cancel(self):
+        ag.deactivate()
+
+class ApiGenGenerateFreeformCommand(ApiGenBaseClass):
+    def run(self, edit):
+        ag.activate()
+        window = self.view.window()
+        window.show_input_panel('ApiGen Arguments', '', self.done, None, self.cancel)
+
+    def done(self, args):
+        path = self.view.file_name()
+        if path == None:
+            return
+
+        ag.activate()
+        self.view.run_command('api_gen_show_console') 
+        config = ag.getConfigFile(path)
+
+        if config != '':
+            print('Processing will proceed using ' + config) 
+            args = ['generate', '--config', config, args]
+            additionalArgs = ag.settings.get('additionalGenerateArgs', [])
+            args.extend(additionalArgs)
+            
+            sublime.set_timeout_async(lambda : ag.runApiGen(args), 0)
+        else:
+            print('No config file could not be found!')
+            ag.endLine()
+            ag.deactivate()
+
+    def cancel(self):
+        ag.deactivate()

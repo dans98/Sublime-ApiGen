@@ -9,6 +9,10 @@
                 "command": "api_gen_generate" 
             },
             { 
+                "caption": "Generate Freeform",
+                "command": "api_gen_generate_freeform" 
+            },
+            { 
                 "caption": "Selfupdate",
                 "command": "api_gen_selfupdate" 
             },
@@ -16,6 +20,10 @@
                 "caption": "Version",
                 "command": "api_gen_version" 
             },
+            { 
+                "caption": "Freeform",
+                "command": "api_gen_freeform" 
+            }
          ]
     }
 ]
