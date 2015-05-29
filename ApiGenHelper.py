@@ -58,16 +58,16 @@ def runApiGen(args):
         startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
         proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False, startupinfo=startupinfo)
     else:
-            proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+        proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
 
     while proc.poll() is None:
-            try:
-                data = proc.stdout.readline().decode(encoding='UTF-8')
-                print(data, end="")
-            except:
-                endLine()
-                deactivate()
-                return
+        try:
+            data = proc.stdout.readline().decode(encoding='UTF-8')
+            print(data, end="")
+        except:
+            endLine()
+            deactivate()
+            return
 
     endLine()
     deactivate()
