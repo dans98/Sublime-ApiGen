@@ -1,4 +1,6 @@
 {
 "phpBin":"php",
 "pharPath": "apigen.phar",
+"configFileName" : "apigen.neon",
+"additionalGenerateArgs": []
 }
