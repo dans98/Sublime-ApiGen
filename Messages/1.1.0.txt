@@ -1,0 +1,11 @@
+ApiGen
+======
+
+Thank you for upgrading ApiGen for Sublime Text 3.
+
+The follwing new features have been added since the last rlease.
+
+* Generate Freeform - Works the same as the Generate option, but the user is prompted to provide additonal command line arguments.
+
+* Freeform - The usere is presented a prompt, and allowd to pass any arguments to ApiGen they wish.
+

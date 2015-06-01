@@ -1,0 +1,1 @@
+Thanks for installing ApiGen for Sublime Text 3.

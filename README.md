@@ -6,13 +6,15 @@ Currently The plugin allows click to run functunallity. Simply right click on an
 
 ### Options
 * **Generate** - Takes the clicked on file, and uses its path as a starting point to walk back to the filesystem root. The plugin checks each directory along the way for an *apigen.neon* file. It will halt it's walk if it finds a file, and call ApiGen passing the *apigen.neon* file path as the (--config) option.
+* **Generate Freeform** - Works the same as the Generate option, but the user is prompted to provide additonal command line arguments.
 * **Selfupdate** - Runs the ApiGen (selfupdate) option, to update the apigen.phar file to the latest revision.
 * **Version** - Runs the ApiGen (-v) version option.
+* **Freeform** - The usere is presented a prompt, and allowd to pass any arguments to ApiGen they wish.
 
 ## Instalation
 
 ### Requirements
-* You must meet the requirements of, and have [ApiGen](https://github.com/ApiGen/ApiGen) instilled on your machine as a [phar](http://php.net/manual/en/intro.phar.php) file.
+* You must meet the requirements of, and have [ApiGen](https://github.com/ApiGen/ApiGen) instilled on your machine.
 
 
 ### Steps
@@ -25,10 +27,12 @@ Currently The plugin allows click to run functunallity. Simply right click on an
     1. From the main menu of Sublime Text go to **Preferences**
     2. Choose **Package Settings**
     3. Choose **ApiGen**
-    4. Choose **Settings - Default**
+    4. Choose **Settings - User**
     5. Set the setting to the approrite value for your machine.
         * **phpBin** - The location of the php executable on your machine.
-        * **pharPath** - The location of the apigen.phar file on your machine.
+        * **pharPath** - The location of apigen on your machine.
+        * **configFileName** - The name of the config file to search for. The default is **apigen.neon**.
+        * **additionalGenerateArgs** - Additonal command line arguments, to be appended to the end of the Generate command.
 
 
 ## Author
