@@ -9,7 +9,7 @@ Currently The plugin allows click to run functunallity. Simply right click on an
 * **Generate Freeform** - Works the same as the Generate option, but the user is prompted to provide additonal command line arguments.
 * **Selfupdate** - Runs the ApiGen (selfupdate) option, to update the apigen.phar file to the latest revision.
 * **Version** - Runs the ApiGen (-v) version option.
-* **Freeform** - The usere is presented a prompt, and allowd to pass any arguments to ApiGen they wish.
+* **Freeform** - The user is presented with a prompt, and allowed to pass any arguments to ApiGen they wish.
 
 ## Instalation
 
@@ -32,7 +32,7 @@ Currently The plugin allows click to run functunallity. Simply right click on an
         * **phpBin** - The location of the php executable on your machine.
         * **pharPath** - The location of apigen on your machine.
         * **configFileName** - The name of the config file to search for. The default is **apigen.neon**.
-        * **additionalGenerateArgs** - Additonal command line arguments, to be appended to the end of the Generate command.
+        * **additionalGenerateArgs** - Additional command line arguments, to be appended to the end of the Generate command.
 
 
 ## Author

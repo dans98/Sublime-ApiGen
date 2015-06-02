@@ -1,0 +1,7 @@
+ApiGen
+======
+
+Thank you for upgrading ApiGen for Sublime Text 3.
+
+Version 1.1.1 fixed a bug related to the loading of settings.
+
