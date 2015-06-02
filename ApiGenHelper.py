@@ -1,7 +1,11 @@
 import sublime, glob, os, subprocess
 
-settings = sublime.load_settings("ApiGen.sublime-settings")
+settings = None
 active = False
+
+def plugin_loaded():
+    global settings
+    settings = sublime.load_settings("ApiGen.sublime-settings")
 
 def canRun():
     global active
